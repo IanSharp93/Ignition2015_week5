@@ -27,19 +27,39 @@ Diving deeper in the MVC aspects of Rails
 
 1. Read the [Odin Project Controller Guide](http://www.theodinproject.com/ruby-on-rails/controllers)
 1. Read the [Odin Project Views Guide](http://www.theodinproject.com/ruby-on-rails/views) and use it to <strong>answer the following questions</strong>
-  1. What is a layout?
-  1. What's the difference between a "view template" and a "layout"?
-  1. What is a "Preprocessor"?
-  1. Why are preprocessors useful?
-  1. How do you make sure a preprocessor runs on your file?
-  1. What's the outputted filetype of a preprocessed *.html.erb file? What about a *.css.scss file?
-  1. What is the difference between the <%= and <% tags?
-  1. What is a view partial?
-  1. How do you insert a partial into your view?
+  1. What is a layout?  
+    A layout has all the tags you need in making a webpage. It is the place where we need to put anything that will be in our webpage. They live in the directory app/views/layouts. 
+
+  2. What's the difference between a "view template" and a "layout"?
+    The view template is simply the outline of of where the layout is. It is the template or folder that contains the layout. where the layout its self holds all the rest of teh material for the website. 
+
+  3. What is a "Preprocessor"?
+    The preprocessors are these <%= and %> tags. They show waht will be embedded inside of our ruby code. They start and end the part of code or information. This is Embedded Ruby (ERB). It's a special way of executing ruby code inside your HTML
+
+  4. Why are preprocessors useful?  
+    They are usually gems that either already come with Rails or can easily be attached to it. Rails then runs them automatically, so all you have to worry about is whether your file has the right extension(s) to tell the preprocessor to run. They are also useful because they are easily able to define and get to work. 
+
+  5. How do you make sure a preprocessor runs on your file?  
+    You have to make sure that Rails starts from the outside in with extra extensions. So it first processes the file using ERB, then treats it as regular HTML. That's fine because ERBs should output good clean HTML.
+
+  6. What's the outputted filetype of a preprocessed *.html.erb file? What about a *.css.scss file?
+    The outoutted filetype of *.html.erb is an ERB adn the filestyle for *.css.scss is a SASS file that then turns into a regular CSS file. 
+
+  7. What is the difference between the <%= and <% tags? 
+    The difference between <% and <%= is that the <%= version actually displays whatever is returned inside the ERB tags. If you use <%, it will execute the code but, no matter what is returned by that line, it will not actually display anything in your HTML template
+
+  8. What is a view partial?  
+    
+  1. How do you insert a partial into your view?  
+ 
   1. How can you tell that a view file is a partial?
+
   1. How do you pass a local variable to a partial?
+
   1. What's the magical Rails shortcut for rendering a User? A bunch of Users?
+
   1. What are asset tags and why are they used?
+
 1. (By Monday 3/9) By yourself, complete the [Odin Project: Basic Routes, Views and Controllers](http://www.theodinproject.com/ruby-on-rails/basic-routes-views-and-controllers)
   1. Skip step 1 of the Application Skeleton section.  As we did last week, you will:
     1. Create a new Rails workspace on C9
