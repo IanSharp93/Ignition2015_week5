@@ -49,16 +49,43 @@ Diving deeper in the MVC aspects of Rails
     The difference between <% and <%= is that the <%= version actually displays whatever is returned inside the ERB tags. If you use <%, it will execute the code but, no matter what is returned by that line, it will not actually display anything in your HTML template
 
   8. What is a view partial?  
-    
-  1. How do you insert a partial into your view?  
- 
-  1. How can you tell that a view file is a partial?
+    View partial is a way to break our views up into partials in the Ruby on Rails. It allows our code to be more concise and much easier to read. 
 
-  1. How do you pass a local variable to a partial?
+  9. How do you insert a partial into your view?  
+    To insert a partial into the view we will have the partial named wiht an underscore such as _user_form.html.erb although the partial is the user_form part of the code. So it is placed in behind the #. 
 
-  1. What's the magical Rails shortcut for rendering a User? A bunch of Users?
+  10. How can you tell that a view file is a partial?
+    We can tell that a view is a partial by being able to render the code using something like this <%= render "shared/some_partial"%>, although the folder of the partial would actually be called app/views/shared. 
 
-  1. What are asset tags and why are they used?
+  11. How do you pass a local variable to a partial?  
+    To pass a local variable to a partial with the "render" code that should allow somehting like the @user variable to be passed to the partial so the code can render the right form with that "render." The code may look like this <%= render "shared/your_partial", :locals=> { :user => @user } %>.     
+
+  12. What's the magical Rails shortcut for rendering a User? A bunch of Users?
+    The magical extraordinary way to to render one user goes something like this. 
+      # app/views/index.html.erb
+      <h1>Users</h1>
+      <ul>
+        <% @users.each do |user|%>
+          <%= render user %>
+        <% end %>
+      </ul>
+    Then for a bunch of user the way is somehting more like dis.
+      # app/views/index.html.erb
+      <h1>Users</h1>
+      <ul>
+        <%= render @users %>
+      </ul>
+
+  13. What are asset tags and why are they used?
+    These asset tags allows us to snag some images. It is a way to locate those files for you based on their name and then it they render the proper HTML tag. An example may look somehting like this. 
+        <%= stylesheet_link_tag "your_stylesheet" %>
+        <%= javascript_include_tag "your_javascript" %>
+        <%= image_tag "happy_cat.jpg" %> 
+  Which will then render this 
+        <link data-turbolinks-track="true" href="/assets/your_stylesheet.css" media="all" rel="stylesheet">
+        <script data-turbolinks-track="true" src="/assets/your_stylesheet.js"></script>
+        <img src="/assets/happy_cat.jpg">
+
 
 1. (By Monday 3/9) By yourself, complete the [Odin Project: Basic Routes, Views and Controllers](http://www.theodinproject.com/ruby-on-rails/basic-routes-views-and-controllers)
   1. Skip step 1 of the Application Skeleton section.  As we did last week, you will:
