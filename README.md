@@ -16,8 +16,15 @@ Diving deeper in the MVC aspects of Rails
     
   4. How do you specify an ID or other variable in a route?  
     The way to specify an ID is wiht a colon. The colon allows Ruby to look for something to save as a ID in in the params hash. 
-  1. How can you easily write all seven RESTful routes in Rails?
-  1. What is the Rails helper method that creates the HTML for links?
+  5. How can you easily write all seven RESTful routes in Rails?  
+    We can easily write these RESTful route by using this # in config/routes.rb
+  ...
+  resources :posts
+  ...
+
+  6. What is the Rails helper method that creates the HTML for links?  
+    Rails automatically generates helper methods for you which correspond to the names of all your routes. These methods end with _path and _url. path, as in edit_post_path(3), will generate just the path portion of the URL, which is sufficient for most applications. url will generate the full URL. The _url. one should be able to create the HTML link. 
+
 1. Read the [Odin Project Controller Guide](http://www.theodinproject.com/ruby-on-rails/controllers)
 1. Read the [Odin Project Views Guide](http://www.theodinproject.com/ruby-on-rails/views) and use it to <strong>answer the following questions</strong>
   1. What is a layout?
