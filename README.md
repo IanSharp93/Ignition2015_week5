@@ -5,10 +5,17 @@ Diving deeper in the MVC aspects of Rails
 
 #### Required 
 1. Read the [Odin Project Routing Guide](http://www.theodinproject.com/ruby-on-rails/routing) and use it to <strong>answer the following questions</strong>
-  1. What is the "Root" route?
-  1. What are the seven RESTful routes for a resource?
-  1. Which RESTful routes share the same URL but use different verbs?
-  1. How do you specify an ID or other variable in a route?
+  1. What is the "Root" route?  
+    The most improtant route out there in the file. It is the Root of the url. It is where we land wih the url of the website or app. 
+
+  2. What are the seven RESTful routes for a resource?  
+    The seven RESTful routes are : get or "index" all the post, "show" one specific post, the route that lests you create a "new" post page, creating the data that we just posted, edit a post page, the route that allows us to update our existing post, the last one allows us to delete the post.
+
+  3. Which RESTful routes share the same URL but use different verbs?  
+    The two routes that share the URL are: post "/posts" => and put "/posts/:id" =>
+    
+  4. How do you specify an ID or other variable in a route?  
+    
   1. How can you easily write all seven RESTful routes in Rails?
   1. What is the Rails helper method that creates the HTML for links?
 1. Read the [Odin Project Controller Guide](http://www.theodinproject.com/ruby-on-rails/controllers)
