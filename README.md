@@ -15,7 +15,7 @@ Diving deeper in the MVC aspects of Rails
     The two routes that share the URL are: post "/posts" => and put "/posts/:id" =>
     
   4. How do you specify an ID or other variable in a route?  
-    
+    The way to specify an ID is wiht a colon. The colon allows Ruby to look for something to save as a ID in in the params hash. 
   1. How can you easily write all seven RESTful routes in Rails?
   1. What is the Rails helper method that creates the HTML for links?
 1. Read the [Odin Project Controller Guide](http://www.theodinproject.com/ruby-on-rails/controllers)
