@@ -25,4 +25,4 @@
 ##### Link to Odin Project Basic Routes, Views and Controllers repo: [my odin repo](<https://odin-project-iansharp93.c9.io>)
         My Repo On GitHub: https://github.com/IanSharp93/Odin_Project.git 
 
-##### Link to Hartl's Rails Tutorial Chapter 5 repo: [my hartl's repo](<linkhere>)
+##### Link to Hartl's Rails Tutorial Chapter 5 repo: [my hartl's repo](<https://github.com/IanSharp93/sample_app-1>)
